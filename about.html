@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — ICSFRI 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0b3d91;    /* deep blue */
+      --secondary:#2e8b57;  /* emerald green */
+      --accent:#f9c400;     /* gold */
+      --bg:#f5f8fa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --container:1100px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:#1f2937;
+      line-height:1.6;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      background-color: #0b3d91;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 40px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 12px rgba(255, 255, 255, 0.7);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f9c400;
+    }
+
+    .register-btn {
+      background-color: #f9c400;
+      color: #0b3d91;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .register-btn:hover {
+      background-color: #ffdb4d;
+    }
+
+
+    /* ---------- PAGE HEADER ---------- */
+    .page-hero{
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+      color:white;
+      padding:50px 20px;
+      text-align:center;
+    }
+    .page-hero h1{font-size:26px;margin-bottom:8px}
+    .page-hero p{opacity:0.95}
+
+    /* ---------- CONTENT WRAPPER ---------- */
+    .container{
+      max-width:var(--container);
+      margin:28px auto;
+      padding:0 18px;
+    }
+
+    /* ---------- ABOUT SECTIONS ---------- */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:50px;
+      align-items:start;
+    }
+    @media (max-width:880px){ .grid{grid-template-columns:1fr} }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:22px;
+      box-shadow:0 6px 18px rgba(11,61,145,0.06);
+      border-top:6px solid var(--secondary);
+    }
+    .card h2{
+      color:var(--primary);
+      margin-bottom:10px;
+      font-size:20px;
+    }
+    .muted{color:var(--muted);font-size:15px}
+
+    .list{
+      margin-top:10px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .list-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .bullet{
+      min-width:34px;
+      height:34px;
+      border-radius:8px;
+      background:linear-gradient(180deg,var(--primary),var(--secondary));
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      box-shadow:0 4px 10px rgba(46,139,87,0.12);
+    }
+
+    /* small note */
+    .note{
+      margin-top:12px;
+      font-size:14px;
+      color:var(--muted);
+      background:#fff7e6;
+      padding:10px 12px;
+      border-radius:8px;
+      border-left:4px solid var(--accent);
+    }
+
+    /* ---------- SINGLE-COLUMN SECTION ---------- */
+    .full-width{
+      margin-top:22px;
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border-radius:12px;
+      padding:22px;
+      box-shadow:0 6px 18px rgba(11,61,145,0.04);
+      border-top:6px solid var(--primary);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer{
+      margin-top:34px;
+      background:var(--primary);
+      color:white;
+      padding:18px 12px;
+      text-align:center;
+      font-size:14px;
+      border-top:4px solid rgba(249,196,0,0.12);
+    }
+
+    /* small helpers */
+    .small{font-size:14px;color:var(--muted)}
+    a.cta-link{color:var(--primary);background:var(--accent);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">ICSFRI 2026</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="call.html">Call for Papers</a>
+      <a href="crp.html">CRP</a>
+      <a href="registeration.html">Registration</a>
+      <a href="Committe.html">Committee</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="register-btn" onclick="window.location.href='test.html'">Register Now</button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="page-hero" role="banner">
+    <div class="container">
+      <h1>About — ICSFRI 2026</h1>
+      <p>First International Conference on Sustainable Futures through Responsible Innovation — organized by Team Elite Publications</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container" role="main" id="content">
+
+    <!-- Conference Overview / Introduction -->
+    <section class="card full-width" aria-labelledby="overview-heading">
+      <h2 id="overview-heading">Conference Overview / Introduction</h2>
+      <p class="muted">
+        The <strong>First International Conference on Sustainable Futures through Responsible Innovation (ICSFRI – 2026)</strong>,
+        organized by <strong>Team Elite Publications</strong>, is a focused international platform for students, researchers,
+        academicians, and professionals to present and discuss ideas that advance sustainability through responsible innovation.
+        The conference emphasizes research and practices that combine technological progress with ethical, environmental, and social responsibility.
+      </p>
+
+      <p class="muted" style="margin-top:12px">
+        ICSFRI 2026 aims to foster interdisciplinary exchange, support young researchers, and promote solutions that align with global sustainability goals.
+        Selected submissions will have opportunities for publication in conference books and indexed journals.
+      </p>
+    </section>
+<br>
+    <!-- Two-column grid: Scope & Why Attend -->
+    <section class="grid" aria-label="Key sections">
+
+      <!-- Scope of the Conference -->
+      <article class="card" aria-labelledby="scope-heading">
+        <h2 id="scope-heading">Scope of the Conference</h2>
+
+        <div class="list" role="list">
+          <div class="list-item" role="listitem">
+            <div class="bullet">1</div>
+            <div>
+              <strong>Sustainable Engineering & Green Technology</strong>
+              <div class="small">Innovations in eco-friendly engineering and low-carbon technologies.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">2</div>
+            <div>
+              <strong>Renewable Energy & Smart Systems</strong>
+              <div class="small">Design and deployment of clean energy solutions and intelligent energy management.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">3</div>
+            <div>
+              <strong>AI, Digital Transformation & Data for Sustainability</strong>
+              <div class="small">Use of AI and digital tools to accelerate sustainable outcomes.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">4</div>
+            <div>
+              <strong>Responsible Innovation & Circular Economy</strong>
+              <div class="small">Business and design models that reduce waste and maximize resource reuse.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">5</div>
+            <div>
+              <strong>Sustainable Agriculture & Environmental Management</strong>
+              <div class="small">Food systems, climate resilience, and conservation strategies.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="note">Note: The scope is intentionally broad to encourage interdisciplinary submissions. Other related topics that advance sustainability and responsible innovation are welcome.</p>
+      </article>
+
+      <!-- Why You Can Attend -->
+      <article class="card" aria-labelledby="why-heading">
+        <h2 id="why-heading">Why You Can Attend</h2>
+        <div class="list" role="list">
+          <div class="list-item" role="listitem">
+            <div class="bullet">✓</div>
+            <div>
+              <strong>Present & Publish</strong>
+              <div class="small">Showcase your work on an international platform and pursue publication in conference books and indexed journals.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">✓</div>
+            <div>
+              <strong>Learn from Experts</strong>
+              <div class="small">Gain insights from keynote lectures and peer presentations by researchers and practitioners.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">✓</div>
+            <div>
+              <strong>Network & Collaborate</strong>
+              <div class="small">Connect with peers, faculty, and industry professionals for future projects and collaborations.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">✓</div>
+            <div>
+              <strong>Recognition & Rewards</strong>
+              <div class="small">Eligibility for cash prizes, free book publication for top teams, and participation certificates.</div>
+            </div>
+          </div>
+
+          <div class="list-item" role="listitem">
+            <div class="bullet">✓</div>
+            <div>
+              <strong>Skill Development</strong>
+              <div class="small">Improve presentation, research communication, and interdisciplinary problem-solving skills.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:12px">
+          Registration and publication options include oral presentation only, presentation + book publication, and journal publication routes.
+        </p>
+      </article>
+
+    </section>
+
+    <!-- Who Should Attend & Purpose (stacked) -->
+    <section style="margin-top:20px" class="grid">
+
+      <!-- Who Should Attend -->
+      <article class="card" aria-labelledby="who-heading">
+        <h2 id="who-heading">Who Should Attend</h2>
+        <ul style="margin-top:10px;list-style:disc;padding-left:18px" class="muted">
+          <li>Undergraduate and Postgraduate students from all disciplines</li>
+          <li>Research Scholars and Academicians</li>
+          <li>Industry professionals and practitioners</li>
+          <li>Entrepreneurs and innovators focusing on sustainable solutions</li>
+          <li>Policy makers and NGO representatives interested in sustainable development</li>
+        </ul>
+      </article>
+
+      <!-- Purpose of the Conference -->
+      <article class="card" aria-labelledby="purpose-heading">
+        <h2 id="purpose-heading">Purpose of the Conference</h2>
+        <p class="muted">
+          The primary purpose of ICSFRI 2026 is to encourage and promote responsible innovation that advances sustainable development.
+          We aim to:
+        </p>
+
+        <ul style="margin-top:10px;list-style:none;padding-left:0" class="list">
+          <li class="list-item">
+            <div class="bullet">A</div>
+            <div>
+              <strong>Promote Interdisciplinary Research</strong>
+              <div class="small">Bring together ideas from engineering, science, social sciences, and business for integrated solutions.</div>
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div class="bullet">B</div>
+            <div>
+              <strong>Disseminate Impactful Work</strong>
+              <div class="small">Facilitate publication and wider dissemination of high-quality research outputs.</div>
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div class="bullet">C</div>
+            <div>
+              <strong>Encourage Young Researchers</strong>
+              <div class="small">Provide a supportive environment for students and early-career researchers to present and grow.</div>
+            </div>
+          </li>
+
+          <li class="list-item">
+            <div class="bullet">D</div>
+            <div>
+              <strong>Foster Collaboration</strong>
+              <div class="small">Create partnerships among academia, industry, and policy for real-world impact.</div>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer>
+  <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
+  <div style="margin-top:6px;font-size:13px">Contact: <a style="color:#fff;text-decoration:underline" href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></div>
+</footer>
+
+</body>
+</html>

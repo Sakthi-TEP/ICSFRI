@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICSFRI 2026 | Registration Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* -------------------- Navbar -------------------- */
+  nav {
+    background-color: #0b3d91;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 12px rgba(255, 255, 255, 0.7);
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #f9c400;
+  }
+
+  .register-btn {
+    background-color: #f9c400;
+    color: #0b3d91;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .register-btn:hover {
+    background-color: #ffdb4d;
+  }
+
+/* -------------------- Hero Section -------------------- */
+  header {
+    text-align: center;
+    background: linear-gradient(to right, #0b3d91, #2e8b57);
+    color: white;
+    padding: 80px 20px;
+  }
+
+  header h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  header p {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+    body { font-family: 'Poppins', sans-serif; background:#f7f9fc; color:#333; margin:0; padding:0; }
+    .form-container { max-width:800px; background:#fff; margin:40px auto; padding:30px 40px; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+    h2 { text-align:center; color:#0b3d91; margin-bottom:25px; }
+    label { display:block; font-weight:600; color:#0b3d91; margin:10px 0 6px; }
+    input, select, textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:8px; font-size:14px; }
+    .submit-btn { background:#2e8b57; color:#fff; padding:12px; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer; margin-top:10px; }
+    .submit-btn:hover { background:#0b3d91; }
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav>
+    <div class="logo">ICSFRI 2026</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="call.html">Call for Papers</a>
+      <a href="crp.html">CRP</a>
+      <a href="registeration.html">Registration</a>
+      <a href="Committe.html">Committee</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="register-btn" onclick="window.location.href='test.html'">Register Now</button>
+  </nav>
+
+<!-- Hero Section -->
+<header>
+  <h1>International Conference on Smart Frontiers in Research and Innovation (ICSFRI 2026)</h1>
+  <p>Organized by <strong>Team Elite Publications</strong> in collaboration with <strong>Update Soon</strong></p>
+</header>
+
+  <div class="form-container">
+    <h2>ICSFRI 2026 Registration</h2>
+    <form id="registrationForm">
+      <label>Full Name*</label>
+      <input type="text" id="name" required>
+
+      <label>Email*</label>
+      <input type="email" id="email" required>
+
+      <label>Phone*</label>
+      <input type="tel" id="phone" pattern="[0-9]{10,15}" required>
+
+      <label>Affiliation / Institution*</label>
+      <input type="text" id="affiliation" required>
+
+      <label>Title of Paper*</label>
+      <input type="text" id="title" required>
+
+      <label>Abstract*</label>
+      <textarea id="abstract" required></textarea>
+
+      <label>Upload Manuscript (PDF or Word)*</label>
+      <input type="file" id="manuscript" accept=".pdf,.doc,.docx" required>
+
+      <label>Mode of Presentation*</label>
+      <select id="mode" required>
+        <option value="">Select Mode</option>
+        <option value="Online">Online</option>
+        <option value="Offline">Offline</option>
+      </select>
+
+      <label>Registration Category*</label>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Presentation Only">Presentation Only</option>
+        <option value="Presentation + Publication">Presentation with Publication</option>
+      </select>
+
+      <label>Publication*</label>
+      <select id="publication" required>
+        <option value="">Select Publication</option>
+        <option value="Presentation with Book Publication">Paer Presentation Only</option>
+        <option value="Presentation with Book Publication">Presentation with Book Publication</option>
+        <option value="Google Scholar Indexed Journal">Google Scholar Indexed Journal</option>
+      </select>
+
+      <label>Message (Optional)</label>
+      <textarea id="message"></textarea>
+
+      <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+  </div>
+
+  <script>
+  const form = document.getElementById('registrationForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Show instant success message
+    alert("✅ Registration submitted successfully! Our team will confirm shortly.");
+
+    // Disable button to avoid duplicate clicks
+    const btn = document.querySelector('.submit-btn');
+    btn.disabled = true;
+    btn.textContent = "Submitting...";
+
+    // Continue sending data to Google Script (in background)
+    const fileInput = document.getElementById('manuscript');
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async function() {
+      const fileContent = reader.result.split(',')[1];
+      const data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        affiliation: document.getElementById('affiliation').value,
+        title: document.getElementById('title').value,
+        abstract: document.getElementById('abstract').value,
+        mode: document.getElementById('mode').value,
+        category: document.getElementById('category').value,
+        publication: document.getElementById('publication').value,
+        message: document.getElementById('message').value,
+        fileName: file.name,
+        fileType: file.type,
+        fileContent: fileContent
+      };
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyZTVSu2T1XeMzMsvNyxNK1WznvcIJhQkdm38jPA2Z6Z4t1x-c7KNk0zP-jeN1WDPWb-Q/exec"; // your script URL
+
+      // Send data without waiting for response
+      fetch(scriptURL, { method: 'POST', body: JSON.stringify(data) })
+        .catch(err => console.error("Background submission error:", err));
+
+      // Reset form after short delay
+      setTimeout(() => {
+        form.reset();
+        btn.disabled = false;
+        btn.textContent = "Submit Registration";
+      }, 2000);
+    };
+    reader.readAsDataURL(file);
+  });
+</script>
+</body>
+</html>

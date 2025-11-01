@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call for Papers — ICSFRI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0b3d91;    /* Deep Blue */
+  --secondary:#2e8b57;  /* Emerald Green */
+  --accent:#f9c400;     /* Gold */
+  --bg:#f5f8fa;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --container:1100px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:#1f2937;
+  line-height:1.6;
+}
+
+a{color:var(--secondary); text-decoration:none;}
+a:hover{text-decoration:underline}
+
+/* NAVBAR */
+    nav {
+      background-color: #0b3d91;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 40px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 12px rgba(255, 255, 255, 0.7);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f9c400;
+    }
+
+    .register-btn {
+      background-color: #f9c400;
+      color: #0b3d91;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .register-btn:hover {
+      background-color: #ffdb4d;
+    }
+
+/* HERO */
+.hero{
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:white;
+  padding:40px 20px;
+  text-align:center;
+}
+.hero h1{font-size:28px;margin-bottom:10px}
+.hero p{opacity:0.95;font-size:16px}
+
+/* CONTAINER */
+.container{
+  max-width:var(--container);
+  margin:26px auto;
+  padding:0 18px;
+}
+
+/* CARDS */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:24px;
+  box-shadow:0 6px 18px rgba(11,61,145,0.06);
+  border-left:6px solid var(--secondary);
+  margin-bottom:24px;
+}
+h2{color:var(--primary);margin-bottom:12px}
+.muted{color:var(--muted)}
+.note{background:#fff3cd;color:#856404;padding:12px;border-left:4px solid #ffeeba;margin-top:12px;border-radius:8px;}
+
+/* GRID FOR TWO COLUMNS */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:26px;
+}
+@media(max-width:960px){.grid{grid-template-columns:1fr}}
+
+/* TOPICS LIST */
+ul, ol{margin-left:18px;margin-top:8px}
+li{margin-bottom:6px}
+
+/* FOOTER */
+footer{
+  margin-top:26px;
+  background:var(--primary);
+  color:white;
+  padding:14px 12px;
+  text-align:center;
+  font-size:14px;
+  border-top:4px solid rgba(249,196,0,0.12);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">ICSFRI 2026</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="call.html">Call for Papers</a>
+      <a href="crp.html">CRP</a>
+      <a href="registeration.html">Registration</a>
+      <a href="Committe.html">Committee</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="register-btn" onclick="window.location.href='test.html'">Register Now</button>
+  </nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>Call for Papers — ICSFRI 2026</h1>
+    <p>Submit your original research papers and review articles for presentation at the First International Conference on Sustainable Futures through Responsible Innovation — 27–28 February 2026 (Online)</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Submission Guidelines & Author Info -->
+  <div class="grid">
+    <div class="card">
+      <h2>Submission Guidelines</h2>
+      <ul>
+        <li>Maximum length: 12 pages (single-column format)</li>
+        <li>Prolonged literature reviews are <strong>not accepted</strong></li>
+        <li>Review articles with expanded findings and comparative analyses are welcome</li>
+      </ul>
+      <h3>Template & Format</h3>
+      <p class="muted">Manuscript templates are available in <strong>.docx</strong> and <strong>.pdf</strong> formats in the Downloads section of the conference website.</p>
+      <h3>Submissions Should Include</h3>
+      <ul>
+        <li>Novel research concepts</li>
+        <li>Ideas for further development</li>
+        <li>Detailed analyses, conclusions, and outcomes</li>
+      </ul>
+      <p class="note">Note: Manuscripts must <strong>not be under review or published elsewhere</strong>.</p>
+      <h3>Author Information</h3>
+      <ul>
+        <li>Names and affiliations of all authors</li>
+        <li>Name and email of the corresponding author</li>
+      </ul>
+    <h2>Submission Instructions</h2>
+      <p class="muted">
+        Prepare manuscripts in the required format and send soft copies in both <strong>.docx</strong> and <strong>.pdf</strong> formats via email to:  
+        <strong><a href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></strong>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Conference Topics</h2>
+      <h3>Environmental Sciences</h3>
+      <ul>
+        <li>Air and Water Pollution Monitoring and Mitigation</li>
+        <li>Climate Change Adaptation and Resilience Strategies</li>
+        <li>Advances in Waste Management and Recycling Technologies</li>
+        <li>Biodiversity Conservation and Restoration</li>
+        <li>Remote Sensing and GIS Applications in Environmental Studies</li>
+      </ul>
+      <h3>Sustainable Materials & Innovation</h3>
+      <ul>
+        <li>Renewable Energy and Resource Management</li>
+        <li>Advanced Functional Materials</li>
+        <li>Composite Materials</li>
+        <li>Nanomaterials and Nanotechnology</li>
+        <li>Smart Cities and Sustainable Infrastructure</li>
+        <li>Digital Transformation in Agriculture and Industry</li>
+        <li>Circular Economy and Resource Efficiency</li>
+        <li>AI and Emerging Technologies for Sustainable Solutions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Submission Section CTA -->
+  <div id="submit-section" class="card">
+    <h2>Ready to Submit?</h2>
+    <p class="muted">Prepare your manuscript in the required format and email the soft copies to <strong><a href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></strong>. Make sure to include all author details and follow the submission guidelines.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
+  <div style="margin-top:6px;font-size:13px">Contact: <a style="color:#fff;text-decoration:underline" href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></div>
+</footer>
+
+</body>
+</html>

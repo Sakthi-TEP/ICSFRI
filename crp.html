@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera-Ready Paper Instructions — ICSFRI 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0b3d91;
+  --secondary:#2e8b57;
+  --accent:#f9c400;
+  --bg:#f5f8fa;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --container:1100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:#1f2937;
+  line-height:1.6;
+}
+a{color:var(--secondary); text-decoration:none;}
+a:hover{text-decoration:underline}
+
+/* NAVBAR */
+    nav {
+      background-color: #0b3d91;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 40px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 12px rgba(255, 255, 255, 0.7);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f9c400;
+    }
+
+    .register-btn {
+      background-color: #f9c400;
+      color: #0b3d91;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .register-btn:hover {
+      background-color: #ffdb4d;
+    }
+
+/* HERO */
+.hero{
+  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  color:white;
+  padding:40px 20px;
+  text-align:center;
+}
+.hero h1{font-size:28px;margin-bottom:10px}
+.hero p{opacity:0.95;font-size:16px}
+
+/* CONTAINER */
+.container{
+  max-width:var(--container);
+  margin:26px auto;
+  padding:0 18px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:24px;
+  box-shadow:0 6px 18px rgba(11,61,145,0.06);
+  border-left:6px solid var(--secondary);
+  margin-bottom:24px;
+}
+h2{color:var(--primary);margin-bottom:12px}
+.muted{color:var(--muted)}
+.note{background:#fff3cd;color:#856404;padding:12px;border-left:4px solid #ffeeba;margin-top:12px;border-radius:8px;}
+
+/* LIST STYLES */
+ol{margin-left:18px;margin-top:8px}
+li{margin-bottom:8px;font-size:15px}
+
+/* FOOTER */
+footer{
+  margin-top:26px;
+  background:var(--primary);
+  color:white;
+  padding:14px 12px;
+  text-align:center;
+  font-size:14px;
+  border-top:4px solid rgba(249,196,0,0.12);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">ICSFRI 2026</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="call.html">Call for Papers</a>
+      <a href="crp.html">CRP</a>
+      <a href="registeration.html">Registration</a>
+      <a href="Committe.html">Committee</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="register-btn" onclick="window.location.href='test.html'">Register Now</button>
+  </nav>
+  
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>Camera-Ready Paper (CRP) Instructions</h1>
+    <p>Ensure your final paper meets all formatting, citation, and submission guidelines for ICSFRI 2026 proceedings.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <div id="instructions-section" class="card">
+    <h2>Important Guidelines</h2>
+    <p class="muted">Before submitting the final camera-ready paper, please carefully review and follow these instructions:</p>
+    <ol>
+      <li>Ensure the plagiarism score is <strong>less than 20%</strong>.</li>
+      <li>All figures and tables must have captions and be numbered appropriately.</li>
+      <li>All figures and tables must be cited in the text.</li>
+      <li>Verify the paper’s title, authors’ names, affiliations, spacing, and details are accurate.</li>
+      <li>Provide the corresponding author’s email before the abstract.</li>
+      <li>The title should accurately summarize the paper’s content.</li>
+      <li>List author names and affiliations in the correct sequence without titles like Dr., Mr., Professor, etc.</li>
+      <li>Do not use prefixes (Dr., Mr., etc.) for authors.</li>
+      <li>Ensure the paper is well-written and thoroughly proofread.</li>
+      <li>References in the paper’s body must follow the ICSFRI/IOP template.</li>
+      <li>Present the methodology or approach clearly and in detail.</li>
+      <li>The article should have a strong organizational structure.</li>
+      <li>Include all graphs and illustrations in high-resolution.</li>
+      <li>Use Equation Editor software to type all equations.</li>
+      <li>Reference list must follow the correct format.</li>
+      <li>Do not include author biographies at the end.</li>
+      <li>Avoid first-person pronouns like I, we, us throughout the paper.</li>
+      <li>Do not mention your institute, center, or co-authors in the acknowledgments.</li>
+    </ol>
+    <p class="note">
+      Submit the camera-ready paper as a <strong>Microsoft Word document</strong> to <a href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a>. PDF-only submissions are generally <strong>not accepted</strong> unless using LaTeX and following the template.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
+  <div style="margin-top:6px;font-size:13px">Contact: <a style="color:#fff;text-decoration:underline" href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></div>
+</footer>
+
+</body>
+</html>

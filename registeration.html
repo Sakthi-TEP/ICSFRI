@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICSFRI 2026 | Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0b3d91;
+      --secondary: #2e8b57;
+      --accent: #f9c400;
+      --bg: #f5f8fa;
+      --card: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 40px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .register-btn {
+      background-color: var(--accent);
+      color: var(--primary);
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .register-btn:hover {
+      background-color: #ffdb4d;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    /* Main Section */
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      flex: 1 1 450px;
+      transition: 0.3s;
+      border-left: 5px solid var(--secondary);
+    }
+
+    .card h2 {
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Documents Section */
+    .documents {
+      background: #eef4ff;
+      padding: 25px;
+      border-left: 5px solid var(--secondary);
+      border-radius: 12px;
+      margin: 40px 0;
+    }
+
+    .documents b {
+      color: var(--primary);
+    }
+
+    .documents ul {
+      margin-top: 10px;
+      margin-left: 25px;
+    }
+
+    /* Registration Button Section */
+    .registration-section {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    /* Tabs (placeholder for future) */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--secondary);
+    }
+
+    .tab-content {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 25px;
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content ul {
+      margin-left: 25px;
+    }
+
+    /* Footer (adjustable, not fixed) */
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 20px 12px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 4px solid rgba(249, 196, 0, 0.12);
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tab-btn {
+        width: 100%;
+        text-align: center;
+      }
+      nav {
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">ICSFRI 2026</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="call.html">Call for Papers</a>
+      <a href="crp.html">CRP</a>
+      <a href="registeration.html">Registration</a>
+      <a href="Committe.html">Committee</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="register-btn" onclick="window.location.href='test.html'">Register Now</button>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Conference Registration</h1>
+    <p>Join ICSFRI 2026 – Register today to confirm your participation</p>
+  </header>
+
+  <!-- Registration Overview -->
+  <div class="container">
+    <div class="row">
+      <div class="card">
+        <h2>How to Register</h2>
+        <p>To register, participants must complete the Enrollment Form and pay the registration fee through an accepted online method. After payment, email the following to <b>icsfri2026@gmail.com</b>:</p>
+        <ul>
+          <li>Scanned Enrollment Form</li>
+          <li>Proof of payment</li>
+          <li>Paper ID and author details</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Payment Details</h2>
+        <table>
+          <tr><th>Category</th><th>Fee (INR)</th></tr>
+          <tr><td>Oral Presentation</td><td>₹1499 per team</td></tr>
+          <tr><td>Presentation + Book Publication</td><td>₹3499 per team</td></tr>
+          <tr><td>Google Scholar Indexed Journal</td><td>₹3499</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Required Documents -->
+    <div class="documents">
+      <p><b>* The camera-ready paper must be submitted with the following documents:</b></p>
+      <ul>
+        <li>Camera-ready paper (Word format)</li>
+        <li>Enrollment Form (scanned copy)</li>
+        <li>Proof of payment via Internet Banking</li>
+        <li>Plagiarism report (if available)</li>
+        <li>Debit/Credit card payment via official link (for foreign authors)</li>
+      </ul>
+    </div>
+
+    <!-- Register Now Button -->
+    <div class="registration-section">
+      <button class="register-btn" onclick="window.location.href='test.html'">
+        Registration Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
+    <div style="margin-top:6px;font-size:13px">Contact: <a href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></div>
+  </footer>
+
+  <script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        tabContents.forEach(c => c.classList.remove('active'));
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

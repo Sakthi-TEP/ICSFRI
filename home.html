@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICSFRI 2026 | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f8fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* -------------------- Navbar -------------------- */
+    nav {
+      background-color: #0b3d91;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 40px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 5px 12px rgba(255, 255, 255, 0.7);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #f9c400;
+    }
+
+    .register-btn {
+      background-color: #f9c400;
+      color: #0b3d91;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .register-btn:hover {
+      background-color: #ffdb4d;
+    }
+
+    /* -------------------- Hero Section -------------------- */
+    header {
+      text-align: center;
+      background: linear-gradient(to right, #0b3d91, #2e8b57);
+      color: white;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 8px;
+    }
+
+    /* -------------------- Scroll Highlights -------------------- */
+    .scroll-info {
+      display: flex;
+      overflow-x: auto;
+      gap: 25px;
+      padding: 15px 20px;
+      background-color: #e9f2ff;
+      border-top: 3px solid #0b3d91;
+      border-bottom: 3px solid #0b3d91;
+    }
+
+    .scroll-info div {
+      min-width: 240px;
+      background: white;
+      border-left: 5px solid #2e8b57;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .scroll-info strong {
+      color: #0b3d91;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* -------------------- Dual Section (Overview + Dates) -------------------- */
+    .info-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    .info-box {
+      flex: 1 1 400px;
+      max-width: 600px;
+      background: #f9fafc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-left: 5px solid #2e8b57;
+    }
+
+    .info-box h2 {
+      color: #0b3d91;
+      margin-bottom: 10px;
+    }
+
+    .info-box table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .info-box td {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* -------------------- Highlights Section -------------------- */
+    .highlights {
+      background: #f5f8fa;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .highlights h2 {
+      color: #0b3d91;
+      margin-bottom: 20px;
+    }
+
+    .highlight-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      width: 260px;
+      border-top: 5px solid #2e8b57;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: #0b3d91;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* -------------------- Footer -------------------- */
+    footer {
+      text-align: center;
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .info-section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav>
+    <div class="logo">ICSFRI 2026</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="call.html">Call for Papers</a>
+      <a href="crp.html">CRP</a>
+      <a href="registeration.html">Registration</a>
+      <a href="Committe.html">Committee</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="register-btn" onclick="window.location.href='test.html'">Register Now</button>
+  </nav>
+
+  <!-- ===== Header Section ===== -->
+  <header id="home">
+    <h1>First International Conference on Sustainable Futures through Responsible Innovation</h1>
+    <p>(ICSFRI – 2026)</p>
+    <p>Organized by <strong>Team Elite Publications</strong><br>(in collaboration with — <em>to be updated</em>)</p>
+    <p><strong>27th & 28th February 2026 | Hybrid Mode</strong></p>
+  </header>
+
+  <!-- ===== Scrolling Info ===== -->
+  <div class="scroll-info">
+    <div><strong>Submission Starts</strong>1st November 2025</div>
+    <div><strong>Last Date for Submission</strong>10th February 2026</div>
+    <div><strong>Acceptance Notification</strong>Within 2 working days</div>
+    <div><strong>Mode</strong>Offline & Online Presentation</div>
+    <div><strong>Cash Prizes</strong>Top 3 Teams</div>
+    <div><strong>Publication</strong>Free Book Publication for Winners</div>
+  </div>
+
+  <!-- ===== Overview & Dates ===== -->
+  <div class="info-section">
+    <div class="info-box">
+      <h2>Conference Overview</h2>
+      <p>
+        The ICSFRI 2026 aims to unite students, scholars, and researchers to share innovative ideas on sustainable 
+        development and responsible innovation. It provides an interdisciplinary platform to showcase impactful 
+        research supporting the UN Sustainable Development Goals.
+      </p>
+      <p>
+        This conference fosters knowledge exchange across science, technology, environment, and social responsibility — 
+        leading toward a sustainable future.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h2>Important Dates</h2>
+      <table>
+        <tr><td><strong>Submission Opens</strong></td><td>1st November 2025</td></tr>
+        <tr><td><strong>Last Submission Date</strong></td><td>10th February 2026</td></tr>
+        <tr><td><strong>Acceptance</strong></td><td>Within 2 working days</td></tr>
+        <tr><td><strong>Conference Dates</strong></td><td>27 – 28 February 2026</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===== Highlights Section ===== -->
+  <section class="highlights">
+    <h2>Conference Highlights</h2>
+    <div class="highlight-cards">
+      <div class="card">
+        <h3>Oral Presentation</h3>
+        <p>₹1499 per team – Online presentation opportunity for students and researchers.</p>
+      </div>
+      <div class="card">
+        <h3>Book Publication</h3>
+        <p>₹3499 per team – Present and publish your paper in a conference book with ISBN.</p>
+      </div>
+      <div class="card">
+        <h3>Indexed Journals</h3>
+        <p>₹3499 – Publication in Google Scholar Indexed Journals.</p>
+      </div>
+      <div class="card">
+        <h3>Cash Prizes</h3>
+        <p>Exciting rewards for the Top 3 teams, including free book publication.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+<footer>
+  <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
+  <div style="margin-top:6px;font-size:13px">Contact: <a style="color:#fff;text-decoration:underline" href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></div>
+</footer>
+
+</body>
+</html>
