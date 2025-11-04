@@ -388,11 +388,49 @@
   </main>
 
   <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
-  <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
-  <div style="margin-top:6px;font-size:13px">Contact: <a style="color:#fff;text-decoration:underline" href="mailto:icsfri2026@gmail.com">icsfri2026@gmail.com</a></div>
+  <div class="container" style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+    <div>© 2026 ICSFRI 2026 • Powered by Team Elite Publications</div>
+    <div>Contact: <a href="mailto:icsfri2026@gmail.com" style="color:#fff;text-decoration:underline">icsfri2026@gmail.com</a></div>
+    <div style="margin-top:6px;">
+      <a href="index.html" style="color:#f9c400;text-decoration:none;margin:0 8px;">Home</a> |
+      <a href="about.html" style="color:#f9c400;text-decoration:none;margin:0 8px;">About</a> |
+      <a href="call.html" style="color:#f9c400;text-decoration:none;margin:0 8px;">Call for Papers</a> |
+      <a href="contact.html" style="color:#f9c400;text-decoration:none;margin:0 8px;">Contact</a>
+    </div>
+  </div>
 </footer>
 
+<style>
+  footer {
+    background: #0b3d91;
+    color: white;
+    padding: 18px 12px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 4px solid rgba(249, 196, 0, 0.12);
+  }
+
+  footer a {
+    transition: 0.3s;
+  }
+
+  footer a:hover {
+    color: #ffdb4d;
+  }
+
+  @media (max-width:600px){
+    footer .container{
+      padding: 12px 10px;
+      gap:4px;
+    }
+    footer div{
+      font-size:13px;
+    }
+  }
+</style>
 </body>
 </html>
+
 
